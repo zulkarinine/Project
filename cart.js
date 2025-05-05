@@ -24,7 +24,7 @@ function reduceQty(name,quantity){
 
 function removeItem(name){
     const remItem=cartSystem.filter(item=>item.name!==name)
-    cartSystem=remItem
+      cartSystem=remItem
     }
 
 function checkItem(name){
