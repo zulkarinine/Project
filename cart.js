@@ -10,12 +10,12 @@ const shop = [
 
 function addItemToCart(id) {
     const findItemFromShop = shop.find(item => item.id === id);
-        if(!findItemFromShop) {
+    if(!findItemFromShop) {
         return "item not available";
     }
 
     const checkItemInCart = cart.find(item => item.id === id);
-      if(checkItemInCart) {
+    if(checkItemInCart) {
         return "item already in cart";
     }
     if(findItemFromShop) {
@@ -23,7 +23,8 @@ function addItemToCart(id) {
         cart.push(addItem);
         return cart;
 
-    }}
+}
+}
 
 function increaseCartQuantity(id, quantity) {
     if(quantity <= 0) {
@@ -31,7 +32,7 @@ function increaseCartQuantity(id, quantity) {
     }
 
     const findItem = cart.find(item => item.id === id);
-       if(findItem) {
+    if(findItem) {
         findItem.quantity += quantity;
         return findItem;
     } else {
@@ -49,8 +50,8 @@ function reduceCartQuantity(id, quantity) {
         findItem.quantity -=  quantity;
         if(findItem.quantity < 1) {
             findItem.quantity = 1;
-    } 
-    return findItem;
+        } 
+        return findItem;
     } else {
         return "item not selected";
     }
@@ -58,8 +59,8 @@ function reduceCartQuantity(id, quantity) {
 
 function removeItemFromCart(id) {
     const remItem = cart.filter(item => item.id !== id);
-      cart = remItem;
-      return cart;
+    cart = remItem;
+    return cart;
 }
 
 function checkItemInCart(id) {
@@ -73,7 +74,7 @@ function checkItemInCart(id) {
 
 function clearCart() {
     cart.length = 0;
-   return cart;
+    return cart;
 }
 
 
