@@ -49,6 +49,9 @@ function clearList() {
 
 
 
+
+
+
 console.log(addTask("Read book"));
 console.log(addTask("wash cloth"));
 console.log(addTask("Wash dishes"));

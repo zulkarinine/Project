@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f2f2f2;
+    }
+
+    form {
+      background-color: white;
+      display: inline-block;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 250px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 270px;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    a {
+      display: block;
+      margin-top: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter Password</h2>
+
+  <form onsubmit="return validateForm()">
+    <input type="text" id="email" placeholder="Email/Username/Phone"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button type="submit">Log In</button>
+
+    <a href="#">Forgot password?</a>
+    <p>Or</p>
+    <button type="button" onclick="alert('Google login coming soon')">Continue with Google</button><br><br>
+    <button type="button" onclick="alert('Telegram login coming soon')">Continue with Telegram</button><br>
+    <a href="#">Create a Gate Account</a>
+  </form>
+
+  <script>
+    function validateForm() {
+      let email = document.getElementById('email').value;
+      let password = document.getElementById('password').value;
+
+      if (email === "" || password === "") {
+        alert("Please fill in both fields.");
+        return false;
+      }
+
+      alert("Login Successful!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>

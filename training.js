@@ -1,266 +1,242 @@
-// let studentNames=[]
+// let shop=[];
+// let cart=[];
+// let id=0;
 
-// function addStudent(name){
-//     if(!studentNames.includes(name)){
-//  studentNames.push(name)}
-//  }
-
-// function remStudent(name){
-// let removed=studentNames.filter(student=>student!==name)
-// studentNames=removed
-// }
-
-// function showList(){
-//         console.log(studentNames)
-// }
-
-// function findName(name){
-//    if(studentNames.includes(name)){
-//     console.log(name + " found")
+// function addItemToShop(name) {
+//    const checkItem = shop.find(item => item.name === name);
+//    if(checkItem) {
+//       throw new Error (name + " already exist in the shop");
+//    } else {
+//       shop.push({ id:id++, name, price:0, quantity:0 });
+//       return shop;
 //    }
 // }
 
-// function sortList(studentName){
-// console.log(studentName.sort())
+// function modifyPrice(id, price) {
+//    if(price < 0){
+//       throw new Error("price cannot be less than 0");
+//    };
+//    const findItem = shop.find(item => item.id === id);
+//    if(findItem) {
+//       findItem.price = price;
+//       return findItem;
+//    } else {
+//       throw new Error("Item not found in shop");
+//    };
 // }
 
-// function countList(studentName){
-// console.log(studentName.length)
+// function updateShopQuantity(id, quantity) {
+//    if(quantity < 0) {
+//       throw new Error("quantity can not be less than 0");
+//    };
+//    const findItem = shop.find(item => item.id === id);
+//    if(findItem) {
+//       findItem.quantity += quantity;
+//       return findItem
+//    } else {
+//       throw new Error ("Item not found in shop");
+//    };
 // }
 
-// function clearList(){
-//    return studentNames=[]
-// }
-// addStudent("ola")
-// addStudent("shade")
-// addStudent("wale")
-// addStudent("tolu")
-// addStudent("wale")
-// remStudent("ola")
-// showList()
-// findName("tolu")
-// sortList(studentNames)
-// countList(studentNames)
-// console.log(studentNames)
-// console.log(clearList())
-
-
-// let cart=[]
-
-// function addItem(name,price){
-// cart.push({name,price,quantity:1})
-// }
-// addItem("samsung",200000)
-
-
-
-// function increaseQty(name,quantity){
-//    let item=cart.find(product=>product.name===name)
-// if(item.name===name){
-//    item.quantity+=quantity;
-// }
-// }
-
-// function deductQty(name,quantity){
-//    let item=cart.find(product=>product.name===name)
-//    if(item.name===name){
-//       item.quantity-=quantity;
+// function addItemToCart(id) {
+//    const findItem = shop.find(item => item.id === id);
+//    if(findItem) {
+//       if(findItem.quantity === 0) {
+//          return findItem.name + " is out of stock";
+//       }
 //    }
+//    if(!findItem) {
+//       throw new Error ("Item is not available in shop");
+//    }
+//    const checkItem = cart.find(item => item.id === id);
+//    if(checkItem) {
+//       throw new Error ("Item already added to the cart");
+//    }
+//    const addItem = {
+//          id: findItem.id,
+//          name: findItem.name,
+//          price: findItem.price,
+//          quantity:1
+//    };
+//    cart.push(addItem);
+//    findItem.quantity -= 1;
+//    return cart;
 // }
-// increaseQty("samsung",1)
-// deductQty("samsung",)
+
+// function increaseCartQuantity(id, quantity) {
+//    if(quantity <= 0) {
+//       throw new Error ("Quantity cannot be less than 0")
+//    };
+//    const shopItem = shop.find(item => item.id === id);
+//    const findItem = cart.find(item => item.id === id);
+//    if(shopItem.quantity < quantity) {
+//       throw new Error ("not enough quantity in shop")
+//    }
+//    if(findItem) {
+//       findItem.quantity += quantity;
+//       shopItem.quantity -= quantity;
+//       return findItem;
+//    };
+// }
+
+// function reduceCartQuantity(id, quantity) {
+//    if(quantity <= 0) {
+//       throw new Error ("Quantity cannot be less than 0");
+//    };
+//    const shopItem = shop.find(item => item.id === id);
+//    const cartItem = cart.find(item => item.id === id);
+//    if(cartItem.quantity < quantity) {
+//       throw new Error ("You can't reduce what is in the cart")
+//    }
+//    if(cartItem) {
+//       cartItem.quantity -= quantity;
+//       shopItem.quantity += quantity;
+//       return cartItem;
+//    };
+// }
+
+// function removeItemFromCart(id) {
+//    const shopItem = shop.find(item => item.id === id);
+//    const cartItem = cart.find(item => item.id === id);
+//    if(cartItem && shopItem) {
+//       shopItem.quantity += cartItem.quantity
+//    }
+//    const removeItem = cart.filter(item => item.id !== id);
+//    cart = removeItem;
+//    return cart;
+// }
+
+// function clearCart() {
+//    cart.forEach(cartItem => {
+//    const shopItem = shop.find(item => item.id === cartItem.id)
+//    if(shopItem) {
+//    shopItem.quantity += cartItem.quantity
+//    }
+//    })
+//    cart.length = 0;
+//    return cart;
+// }
+
+// try {
+//    console.log(addItemToShop("Apple"))
+// } catch (error) {
+//    console.log("error: ",error.message)
+// }
+
+// try {
+//    console.log(addItemToShop("Book"))
+// } catch(error) {
+//    console.log("error: ",error.message)
+// }
+
+// try {
+//    console.log(addItemToShop("Pen"))
+// } catch(error) {
+//    console.log("error: ",error.message)
+// }
+
+// try {
+//    console.log(addItemToShop("Bread"))
+// } catch(error) {
+//    console.log("error: ",error.message)
+// }
+
+// try {
+//    console.log(addItemToShop("Belt"))
+// } catch(error) {
+//    console.log("error: ",error.message)
+// }
+
+// try {
+//    console.log(addItemToShop("Cup"))
+// } catch(error) {
+//    console.log("error: ",error.message)
+// }
+
+// try {
+//    console.log(addItemToShop("Book"))
+// } catch(error) {
+//    console.log("error: ",error.message)
+// }
+
+
+
+// try {
+//    console.log(addItemToShop("Book"))
+// } catch(error) {
+//    console.log("error: ",error.message)
+// }
+// try {
+//    console.log(addItemToShop("Book"))
+// } catch(error) {
+//    console.log("error: ",error.message)
+// }
+// try {
+//    console.log(addItemToShop("Book"))
+// } catch(error) {
+//    console.log("error: ",error.message)
+// }
+
+// console.log(addItemToShop("Apple"))
+// console.log(addItemToShop("Book"))
+// console.log(addItemToShop("Pen"))
+// console.log(addItemToShop("Bread"))
+// console.log(addItemToShop("Belt"))
+// console.log(addItemToShop("Cup"))
+// console.log(addItemToShop("Cup"))
+// try {
+//    console.log(modifyPrice(9, 2));
+// } catch (error) {
+//    console.log("error: ", error.message)
+// }
+
+
+// console.log(modifyPrice(1, 1200))
+// console.log(modifyPrice(2, 300))
+// console.log(modifyPrice(3, 2500))
+// console.log(modifyPrice(4, 4000))
+// console.log(modifyPrice(5, 250))
+// console.log(modifyPrice(6, 500))
+// console.log(updateShopQuantity(0, 20))
+// console.log(updateShopQuantity(1, 20))
+// console.log(updateShopQuantity(2, 20))
+// console.log(updateShopQuantity(3, 20))
+// console.log(updateShopQuantity(4, 20))
+// console.log(updateShopQuantity(5, 20))
+// console.log(updateShopQuantity(6, 20))
+// console.log(addItemToCart(0))
+// console.log(addItemToCart(1))
+// console.log(increaseCartQuantity(0, 10))
+// console.log(reduceCartQuantity(0, 4))
+// console.log(removeItemFromCart(0))
+// console.log(clearCart())
 // console.log(cart)
-
-
-// console.log(cart.name)
-
+// console.log(shop)
 
 
 
+const words = ["apple", "banana", "kiwi", "cherry", "strawberry", "pineapples"]
+
+// Output: ["strawberry", "pineapple"]
+
+function findLongestWords(words) {
+    let longestWords = []
+    let maxLength = 0
+
+    for (let i = 0; i < words.length; i++) {
+        let currentWord = words[i]
+        if (currentWord.length > maxLength) {
+            // Found a new longest length — reset the list
+            maxLength = currentWord.length
+            longestWords = [currentWord]
+        } else if (currentWord.length === maxLength) {
+            // Same length as current longest — add it
+            longestWords.push(currentWord)
+        }
+    }
+
+    return longestWords
+}
 
 
-
-// let cartSystem=[]
-// function addToCart(name,price){
-//    cartSystem.push({name,price,quantity:1})
-// }
-
-// function updateQty(name,quantity){
-//    let items=cartSystem.find(product=>product.name===name)
-//    if(items){
-//       items.quantity=quantity+items.quantity
-//    }
-// }
-
-// function updateQtyByOne(name){
-//    let items=cartSystem.find(product=>product.name===name)
-//    if(items){
-//       items.quantity+=1
-//    }
-// }
-
-// function updateQtyMinusOne(name){
-//    let items=cartSystem.find(product=>product.name===name)
-//    if(items){
-//       items.quantity-=1
-//    }
-// }
-
-// function remItem(name){
-//    let removed=cartSystem.filter(product=>product.name!==name)
-//    cartSystem=removed
-// }
-
-// function showCart(){
-//  console.log(cartSystem)
-// }
-
-// function cheapPrice(){
-//    let price=cartSystem.filter(product=>product.price<500)
-//    console.log(price)
-// }
-
-// function checkItem(name){
-//    let findItem=cartSystem.find(product=>product.name===name)
-//    console.log(name+" found")
-// }
-
-// function clearCart(){
-//    cartSystem.length=0
-//    console.log(cartSystem)
-// }
-// addToCart("Apple",200)
-// addToCart("Slice Bread",1500)
-// addToCart("Teddy Bear",3000)
-// updateQty("Apple",2)
-// updateQtyByOne("Apple")
-// updateQtyMinusOne("Apple")
-// remItem("Teddy Bear")
-// showCart()
-// cheapPrice()
-// checkItem("Slice Bread")
-// clearCart()
-// console.log(cartSystem)
-
-// let toDoList=[];
-// let id=0
-
-// function addTask(task){
-//    toDoList.push({id:id++,task,status:"pending"})
-// }
-
-// function updateStatus(id,status){
-//    const findTask=toDoList.find(list=>list.id===id)
-//    if(findTask){
-//       findTask.status=status
-//    }else{
-//       console.log("task not found")
-//    }
-// }
-
-// function removeTask(id){
-//    const remTask=toDoList.filter(list=>list.id!==id)
-//    toDoList=remTask
-// }
-
-// function editTask(id,task){
-//    const findTask=toDoList.find(list=>list.id===id)
-//    if(findTask){
-//       findTask.task=task
-//    }else{
-//       console.log("task not found")
-//    }
-// }
-
-// function viewTask(){
-//    console.log(toDoList)
-// }
-
-// function filterStatus(status){
-//    const filterTask=toDoList.filter(list=>list.status===status)
-//    console.log(filterTask)
-// }
-
-// function clearList(){
-//    toDoList.length=0
-//    console.log(toDoList)
-// }
-
-
-
-
-// NddTask("Read book")
-// addTask("wash cloth")
-// addTask("Wash dishes")
-// addTask("Do Assignment")
-// addTask("prepare dinner")
-// updateStatus(3,"done")
-// removeTask(2)
-// editTask(1,"do chores")
-// viewTask()
-// filterStatus("done")
-// clearList()
-
-
-// console.log(toDoList)
-
-// let student={
-//    Name:"Felix",
-//    Age:24,
-//    Grade:"7th",
-//    Subjects:["English","Art","Biology","Physics"],
-//    isEnrolled:true
-// }
-
-// student.Grade="8th"
-// student.school="Green Valley School"
-// student.Subjects.push("History")
-
-// console.log("Name:"+student.Name,"Grade:"+student.Grade)
-
-// console.log(student)
-
-// function printStudentInfo(student){
-//    console.log(student.Name);
-//    console.log(student.Age);
-//    console.log(student.Subjects.join(","))
-//    console.log(student.isEnrolled ? "yes" : "No")
-// }
-
-// printStudentInfo(student)
-
-// const students=[
-//    {names:"dele",age:"20",subject:"French",isEnrolled:true},
-//    {names:"bose",age:"24",subject:"Agric",isEnrolled:true},
-//    {names:"tunde",age:"18",subject:"Economics",isEnrolled:false},
-     
-// ]
-
-// function getEnrolledStudents(isEnrolled){
-//    const findStatus=students.filter(student=>student.isEnrolled===isEnrolled)
-//    console.log(findStatus)
-// }
-// getEnrolledStudents(false)
-
-// function findStudentByName(name){
-//    const findName=students.filter(student=>student.names===name)
-//    console.log(findName)
-// }
-
-// function getEnrollByName(isEnrolled){
-//    const enroll=students
-//    .filter(student=>student.isEnrolled===isEnrolled)
-//    .map(student=>student.names)
-//    console.log(enroll)
-// }
-// getEnrollByName(true)
-// findStudentByName("dele")
-
-let library = [ 
-   {title: "The sugar girl", author: "Olawoyin", year: 2025, isAvailable: true} ,  
-   {title: "The hunter prey", author: "Felix", year: 2021, isAvailable: false},            
-   {title: "The sun and the moon", author: "Emmanuel", year: 2023, isAvailable: true},            
-   {title: "The garden of eden", author: "Sunkanmi", year: 2019, isAvailable: false}
-]
-
-console.log(library)
+console.log(findLongestWords(words))

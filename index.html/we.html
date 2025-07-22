@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login in page</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Enter the below credential to log in successfully</h1>
+    <form style="text-align: center;" name="details" action="#" onsubmit="return validateform()">
+      Username: <input  type="text" name="uname"> <br><br><br>
+      Password: 
+      <input type="text" name="pword"> <br><br>
+      <button name="Login" type="submit">Login</button>
+    </form>
+    <p id="msg"></p>
+    <p id="outcome"></p>
+
+    <script>
+      function validateform() {
+        const userName = "admin";
+        const passWord = 1234;
+        const x = document.forms["details"]["uname"].value;
+        const y = document.forms["details"]["pword"].value;
+        const pword = parseInt(y)
+      
+
+        if(x.toLowerCase !== userName.toLowerCase) {
+          document.getElementById("msg").innerHTML = "Invalid username or password.";
+          document.getElementById("msg").style.color = "red";
+          return false;
+        }
+
+        if(isNaN(pword) || pword !== passWord) {
+          document.getElementById("msg").innerHTML = "Invalid username or password.";
+          document.getElementById("msg").style.color = "red";
+          return false;
+        }
+
+        document.getElementById("msg").innerHTML = "Login successful!";
+        document.getElementById("msg").style.color = "purple";
+        document.getElementById("msg").style.textAlign = "centers";
+        window.location.href = "design.html";
+        return false;
+
+        
+      }
+    </script>
+  </body>
+</html>

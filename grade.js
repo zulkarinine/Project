@@ -157,3 +157,28 @@
 // let words = ["Take","Me","To","Mama","Please"]
 // let lengths = wordLen(words)
 // console.log(lengths)
+
+
+let scores = [20, 10 ,9, 55, 87, 78, 38, 99];
+
+function validateScores(scores) {
+    let mistypedScore = scores.filter(score => typeof score !== "number" || isNaN(score));
+    let scoreRange = scores.filter(score => score < 0 || score > 100);
+    let decimalScore = scores.filter(score => !Number.isInteger(score));
+
+    if (mistypedScore.length > 0) {
+        throw new Error(mistypedScore + " is not a valid number");
+    }
+
+    if (scoreRange.length > 0) {
+        throw new Error(scoreRange + " :score(s) must be between 0 and 100");
+    }
+
+    if (decimalScore.length > 0) {
+        throw new Error(decimalScore + " :score(s) must be whole numbers (no decimals)");
+    }
+
+    return "All scores are valid";
+}
+
+console.log(validateScores(scores)); // ✅ Should print: All scores are valid

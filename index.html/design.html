@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New design</title>
+        <style>
+        .navigation {
+            /* border: 1px solid red; */
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+        
+        }
+        .logo{
+            padding: 30px 49px;
+            color: black;
+            /* border: 1px solid black; */
+            font-size: 20px;
+            line-height: 30px;
+            vertical-align: middle;
+            top: 25px;
+            left: 50px;
+            /* display: inline; */
+        }
+        .navtik ul li {
+            display: inline;
+            /* border: 1px solid red; */
+            padding: 261px 28px;
+        }
+        .navtik ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        .header {
+            /* border: 1px solid red; */
+            height: 624px;
+            padding: 100px;
+        }
+        .header .details{
+            /* border: 1px solid red; */
+            height: 424px;
+            width: 1080px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .header .details .headline {
+            height: 317px;
+            width: 557px;
+            /* border: 1px solid rgb(12, 8, 8); */
+            margin: 50px 0px;
+            
+        }
+        .header .details .img {
+            height: 424px;
+            width: 495px;
+            display: inline;
+            /* border: 1px solid red; */
+        }
+        .logo_section {
+            /* border: 1px solid red; */
+            height: 166.83px;
+            padding: 66px;
+        }
+        .logo_section .logos {
+            border-width: 2px 0px 2px 0px;
+            border-style: solid;
+            border-color: #00000033;
+            height: 166.83px;
+            width: 1078px;
+            padding: 0px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0px;
+        }
+        .logo_section .logos .image {
+            display: inline;
+            /* border: 1px solid red; */
+        }
+        .skill_section {
+            /* border: 1px solid red; */
+            height: 688px;
+            padding: 180px 140px;
+        }
+        .skill_section .skills {
+            /* border: 1px solid black; */
+            width: auto;
+            height: 328px;
+            display: flex;           
+            margin: 20px;
+        }
+        .skill_section .skills .skill {
+            /* border: 1px solid red;  */
+            width: 249.9px;
+            height: 328px;
+            margin-right: 150px;
+          
+        }
+        .skill_section .skills .skill .img {
+            /* border: 1px solid red; */
+            width: 130px;
+            height: 130px;
+            margin: 0px 50px;
+        }
+        .skill_section .skills .skill .headline {
+            /* border: 1px solid red; */
+            width: 249.9px;
+            height: 142px;
+            margin: 50px 0px;
+        }
+        .latest_work {
+            /* border: 1px solid red; */
+            height: 1016px ;
+            width: auto;
+            padding: 20px 100px;
+        }
+        .latest_work .header {
+            /* border: 1px solid red; */
+            width: 237px;
+            height: 42px;
+            margin: 0px 300px;
+            
+        }
+        .workcard {
+            /* border: 1px solid red; */
+            height: 750px;
+            width: 1080px;
+        }
+        .workcard .stripe1 {
+            /* border: 1px solid red; */
+            height: 407px;
+            width: 1080px;
+            display: flex;
+            gap: 27px;
+        }
+        .workcard .stripe1 .card {
+            /* border: 1px solid red; */
+            height: 407px;
+            width:  290px;
+            padding-right: 50px;
+        }
+        .workcard .stripe1 .card .img {
+            /* border: 1px solid red; */
+            height: 290px;
+            width:  290px;
+            padding-right: 50px;
+        }
+        .workcard .stripe1 .card .img {
+            /* border: 1px solid red; */
+            height: 290px;
+            width:  290px;
+            padding-right: 50px;
+        }
+        .client_section {
+            /* border: 1px solid red; */
+            height: 675.98px;
+            padding-top: 100px;
+            padding-right: 100px;
+            padding-bottom: 150px;
+            padding-left: 100px;
+            gap: 10px;
+        }
+        .client_section .header {
+            /* border: 1px solid red; */
+            width: 113px;
+            height: 26.98px;
+            margin: 0px 350px;
+        }
+        .client_section .card {
+            /* border: 1px solid red; */
+            width: 1080px;
+            height: 344px;
+            gap: 63.5px;
+            display: flex;
+        }
+        .client_section .card .mobile {
+            border: 1.5px solid #FFD285;
+            width: 315px;
+            height: 344px;
+            background-color: #FFFCF5;
+        }
+        .client_section .card .mobile .frame {
+            /* border: 1px solid red; */
+            width: 263px;
+            height: 284px;
+            margin: 25px;
+        }
+        .client_section .card .mobile .frame .text {
+            /* border: 1px solid red; */
+            width: 263px;
+            height: 120px;
+        }
+        .client_section .card .mobile .frame .info {
+            /* border: 1px solid red; */
+            width: 263px;
+            height: 84px;
+            margin-top: 77px;
+            display: flex;
+        }
+        .client_section .card .mobile .frame .info .rate {
+            /* border: 1px solid red; */
+            width: 210px;
+            height: 84px;
+            /* margin-bottom: 10px; */
+        }
+        .client_section .card .mobile .frame .info .rate .ratestar {
+            /* border: 1px solid red; */
+            width: 120px;
+            height: 27px;
+            gap: 10px;
+        }
+        .client_section .card .mobile .frame .info .rate .name {
+            /* border: 1px solid red; */
+            width: 210px;
+            height: 54px;
+        }
+        .client_section .card .mobile .frame .info .Authorimg {
+            /* border: 1px solid red; */
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+        }
+        .footer {
+            /* border-top: 2px solid #00000033; */
+            height: 669px;
+            padding-right: 100px;
+            padding-bottom: 70px;
+            padding-left: 100px;
+            gap: 10px;
+            /* display: flex;
+            justify-content: space-between; */
+        }
+        .footer .info {
+            border-top: 2px solid #00000033;
+            width: 1080px;
+            height: 599px;
+            gap: 70px;
+        }
+        .footer .info .details {
+            /* border: 1px solid red; */
+            width: 1080px;
+            height: 529px;
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            /* gap: 190px; */
+        }
+        .footer .info .details .contact_info {
+            /* border: 1px solid red; */
+            width: 360px;
+            height: 313px;
+            gap: 60px;
+        }
+        .footer .info .details .contact_info .footer_message {
+            /* border: 1px solid red; */
+            width: 360px;
+            height: 217px;
+            /* margin-top: 95px; */
+            gap: 40px;
+        }
+        .footer .info .details .contact_info .footer_message .head {
+            /* border: 1px solid black; */
+            max-width: 360px;
+            height: 42px;
+        }
+        .footer .info .details .contact_info .footer_message .text {
+            /* border: 1px solid red; */
+            width: 360px;
+            height: 135px;
+            margin-top: 80px;
+        }
+        .footer .info .details .contact_info .social_icons {
+            /* border: 1px solid red; */
+            width: 232px;
+            height: 36px;
+            margin-top: 57.5px;
+        }
+        .footer .info .details .textfield {
+            /* border: 1px solid red; */
+            width: 530px;
+            height: 529px;
+            gap: 40px;
+        }
+        .footer .info .details .textfield .details {
+            /* border: 1px solid black; */
+            width: 530px;
+            height: 410px;
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+            gap: 20px;
+            /* gap: 20px; */
+        }
+        .footer .info .details .textfield .details .textname {
+            /* border: 1px solid red; */
+            width: 470px;
+            height: 30px;
+            padding: 21px 30px;
+            /* gap: 10px; */
+            margin: 0px;
+            background-color: #F3F3F3;
+        }
+        .footer .info .details .textfield .details .textname .name {
+            /* border: 1px solid red; */
+            width: 470px;
+            height: 27px;
+        }
+        .footer .info .details .textfield .details .textemail {
+            /* border: 1px solid red; */
+            width: 470px;
+            height: 30px;
+            padding: 21px 30px;
+            /* gap: 10px; */
+            /* margin-bottom: 0px; */
+            background-color: #F3F3F3;
+        }
+        .footer .info .details .textfield .details .textemail .email {
+            /* border: 1px solid red; */
+            width: 470px;
+            height: 27px;
+        }
+        .footer .info .details .textfield .details .textmessage {
+            /* border: 1px solid red; */
+            width: 470px;
+            height: 200px;
+            padding: 21px 30px;
+            margin-top: 0px;
+            /* gap: 10px; */
+            background-color: #F3F3F3;
+        }
+        .footer .info .details .textfield .details .textmessage .message {
+            /* border: 1px solid red; */
+            width: 470px;
+            height: 180px;
+        }
+        .footer .info .details .textfield .button {
+            /* border: 1px solid red; */
+            /* width: 70px;
+            height: 30px; */
+            margin-top: 57px;
+            gap: 10px;
+            /* background-color: #2D2D2D; */
+        }      
+
+    </style>
+    </head>
+
+    <body>
+        <section>
+            <nav class="navigation">
+                <div class="logo">
+                    <h3 id="LG">Logo</h3>
+                </div>
+                <div class="navtik">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                </div>
+            </nav>
+        </section>
+        
+        <section>
+            <header class="header">
+                <div class="details">
+                    <div class="headline">
+                        <span style="font-weight: 600px;font-size: 20px; line-height: 30px;">Branding | Image making</span><br><br>
+                        <span id="portfolio-heading" style="font-weight: 600px;font-size: 80px; line-height: 90px;"><b>My awesome portfolio</b></span><br><br><br><br>
+                        <span>And I made it myself! In Figma, with Anima Without code :</span>
+                    </div>
+                    <div class="img">
+                        <img src="circle.png" alt="color circle">
+                    </div>
+                </div>   
+            </header>
+        
+        </section>
+        
+        <section>
+            <div class="logo_section">
+                <div class="logos">
+                    <div class="image">
+                        <img src="be.png" alt="BE" style="width: 53.69px; height: 34px; padding: 50px 0px;">
+                        <img src="Google.jpg" alt="BE" style="width: 103.29px; height: 34px; padding: 50px 60px;">
+                        <img src="Apple.png" alt="BE" style="width: 38.11px; height: 46.83px; padding: 50px 60px;">
+                        <img src="Dribbble.png" alt="BE" style="width: 139.01px; height: 34px; padding: 50px 60px;">
+                        <img src="Awwwards.jpg" alt="BE" style="width: 213.85px; height: 34px; padding: 50px 60px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="skill_section">
+                <div class="skills">
+                    <div class="skill">
+                        <div class="img">
+                            <img src="Image placeholder.png" alt="image placeholder">
+                        </div>
+                        <h3 style="font-weight: 600px; font-size: 27px; line-height: 42px; text-align: center;">Product design</h3>
+                        <span style="font-weight: 400px; font-size: 17px; line-height: 27px; text-align: center;">This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</span>
+                    </div>
+                    <div class="skill">
+                        <div class="img">
+                            <img src="Image placeholder2.png" alt="image placeholder">
+                        </div>
+                        <h3 style="font-weight: 600px; font-size: 27px; line-height: 42px; text-align: center;">Product design</h3>
+                        <span style="font-weight: 400px; font-size: 17px; line-height: 27px; text-align: center;">This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</span>
+                    </div>
+                    <div class="skill">
+                        <div class="img">
+                            <img src="Image placeholder 3.png" alt="image placeholder">
+                        </div>
+                        <h3 style="font-weight: 600px; font-size: 27px; line-height: 42px; text-align: center;">Product design</h3>
+                        <span style="font-weight: 400px; font-size: 17px; line-height: 27px; text-align: center;">This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="latest_work">
+                <div class="header">
+                    <h2 id="work-heading" style="font-weight: 600; size: 32px; line-height: 42px; text-align: center;">My latest work</h2>
+                </div>
+                <div class="workcard">
+                    <div class="stripe1">
+                        <div class="card">
+                            <div class="img">
+                                <img src="eye.png" alt="eye" style="width: 340px; height: 290px;">
+                            </div>
+                            <div>
+                                <span><b>Free bird</b> <br><br>Lynyrd Skynyrd</span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img">
+                                <img src="circlecard.png" alt="eye" style="width: 340px; height: 290px;">
+                            </div>
+                            <div>
+                                <span><b>Purple Haze</b> <br><br>Jimi Hendrix</span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img">
+                                <img src="green.png" alt="eye" style="width: 340px; height: 290px;">
+                            </div>
+                            <div>
+                                <span><b>You Really Got Me</b> <br><br>The Kinks</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stripe1">
+                        <div class="card">
+                            <div class="img">
+                                <img src="american.png" alt="American Girl" style="width: 340px; height: 290px;">
+                            </div>
+                            <div>
+                                <span><b>American Girl</b> <br><br>Tom Petty</span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img">
+                                <img src="white lot lover.png" alt="Whole Lotta Love" style="width: 340px; height: 290px;">
+                            </div>
+                            <div>
+                                <span><b>Whole Lotta Love</b> <br><br>Led Zeppelin</span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img">
+                                <img src="under pressure.png" alt="Under Pressure " style="width: 340px; height: 290px;">
+                            </div>
+                            <div>
+                                <span><b>Under Pressure </b> <br><br>Queen</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <section>
+        
+        <section>
+            <div class="client_section">
+                <div class="header">
+                    <h2 style="font-weight: 600px;font-size: 32px;line-height: 100%;letter-spacing: 0%;"><b>Clients</b></h2>
+                </div>
+                <div class="card">
+                    <div class="mobile">
+                        <div class="frame">
+                            <div class="text">
+                                <span style="font-weight: 600px;font-size: 20px;line-height: 30px;letter-spacing: 0%;"><b>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</b></span>
+                            </div>
+                            <div class="info">
+                                <div class="Authorimg">
+                                    <img src="Author images.png" alt="Author Image">
+                                </div>
+                                <div class="rate">
+                                    <div class="ratestar">
+                                        <img src="Rate stars.png" alt="rating level">
+                                    </div>
+                                    <div class="name">
+                                        <span style="font-weight: 400px;font-size: 17px;line-height: 27px;letter-spacing: 0%;">Gemma Nolen,Google</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile">
+                        <div class="frame">
+                            <div class="text">
+                                <span style="font-weight: 600px;font-size: 20px;line-height: 30px;letter-spacing: 0%;"><b>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</b></span>
+                            </div>
+                            <div class="info">
+                                <div class="Authorimg">
+                                    <img src="Author images (1).png" alt="Author Image">
+                                </div>
+                                <div class="rate">
+                                    <div class="ratestar">
+                                        <img src="Rate stars.png" alt="rating level">
+                                    </div>
+                                    <div class="name">
+                                        <span style="font-weight: 400px;font-size: 17px;line-height: 27px;letter-spacing: 0%;">Gemma Nolen,Google</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile">
+                        <div class="frame">
+                            <div class="text">
+                                <span style="font-weight: 600px;font-size: 20px;line-height: 30px;letter-spacing: 0%;"><b>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</b></span>
+                            </div>   
+                            <div class="info">
+                                <div class="Authorimg">
+                                    <img src="Author images (2).png" alt="Author Image">
+                                </div>
+                                <div class="rate">
+                                    <div class="ratestar">
+                                        <img src="Rate stars.png" alt="rating level">
+                                    </div>
+                                    <div class="name">
+                                        <span style="font-weight: 400px;font-size: 17px;line-height: 27px;letter-spacing: 0%;">Gemma Nolen,Google</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="footer">
+                <div class="info">
+                    <div class="details">
+                        <div class="contact_info">
+                            <div class="footer_message">
+                                <div class="head">
+                                    <h2 onmouseover="mOver(this)" onmouseout="mOut(this)" style="text-align: center;">Let’s work together</h2>
+                                </div>
+                                <div class="text">
+                                    <span>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com</span>
+                                </div>
+                            </div>
+                                <div class="social_icons">
+                                    <img src="Social icons.png" alt="social_icons">
+                                </div>
+                        </div>
+                        <form name="frm1" action="#" onsubmit="return validateform()">
+                        <div class="textfield">
+                            <div class="details">
+                                <div class="textname">
+                                   <input type="text" name="FLname" class="name" placeholder="First Name                                                     Last Name">
+                                </div>
+                                <div class="textemail">
+                                    <input type="email" name="mail" class="email" placeholder="Your Email Address">
+                                </div>
+                                <div class="textmessage">
+                                    <textarea class="message" name="textarea" placeholder="Type your message here"></textarea>
+                                </div>
+                            </div>
+                            <div id="demo" class="button">
+                                <p>Click the below button to Submit</p>
+                                <input type="submit" value="Submit">
+                                <p id="demo"></p>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    
+                    <p id="entry" style="color: blue;"></p>
+                </div>
+            </div>
+        </section>
+   
+        <script>
+            const heading = document.getElementById("portfolio-heading");
+            const texts = ["My awesome portfolio","My cool portfolio"];
+            let index = 0;
+
+            setInterval(() => {
+                index = (index + 1) % texts.length;
+                heading.textContent = texts[index];
+            }, 1000);
+
+            // const newText = document.getElementById("LG")
+            // newText.innerHTML = "My Logo"
+
+            // const newColor = document.getElementById("LG")
+            // newColor.style.color = "red"
+
+            // document.getElementById("demo").innerHTML = Date()
+                    
+            function mOver(obj) {
+                obj.innerHTML = "To make this better"
+            }
+
+             function mOut(obj) {
+                obj.innerHTML = "Let’s work together"
+            }
+
+            // let r = document.getElementById("mybtn");
+            // r.addEventListener("click", success);
+            // r.addEventListener("click", reload);
+            
+            // function success() {
+            //     alert("successfully submitted")
+            // };
+
+            //   function reload() {
+            //     alert("press OK to reload page")
+            // };
+
+            function validateform() {
+                
+                let x = document.forms["frm1"]["FLname"].value;
+                let y = document.forms["frm1"]["mail"].value;
+                let z = document.forms["frm1"]["textarea"].value;
+            
+            if (x.length < 2) {
+                document.getElementById("demo").innerHTML = "Text is too short";
+                return false;
+            }
+            if (y.length <= 0) {
+                document.getElementById("demo").innerHTML = "Email field cannot be empty";
+                return false;
+            }
+            if (z.length <= 0) {
+                document.getElementById("demo").innerHTML = "text area cannot be blank";
+                return false;
+            }
+
+            document.getElementById("entry").innerHTML = `Name: ${x}, Email: ${y}, Text: ${z}`;
+            return false;
+           
+        }
+
+        </script>
+    </body>
+</html>

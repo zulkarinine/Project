@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+<style>
+    .signin_container {
+        /* border: 1px solid black; */
+        width: 400px;
+        height: 350px;
+        /* margin: 100px 100px; */
+        margin-top: 100px;
+        margin-left: 400px;
+        display: flex;
+    }
+    .signin_container .inner {
+        /* border: 1px solid black; */
+        width: 300px;
+        height: 300px;
+        /* margin: 100px 100px; */
+        margin-top: 20px;
+        margin-left: 50px;
+        align-content: center;  
+        background-color:darkgrey;    
+    }
+</style>
+
+<body>
+    <section class="signin_container">
+        <div class="inner">
+            <form style="margin-left: 50px;" name="lpage" action="#" onsubmit="return validateform()">
+                <h2>Login to your account</h2>
+                Username: <br> <input type="text" name="uname"> <br> <br>
+                Password: <br> <input type="password" name="pword"> <br><br>
+                <input type="submit" value="Login">
+                <a href="#">Forget Password?</a> <b>
+                <p>Don't have an account yet?</p>
+                <a href="#">Create an account</a>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div id="errorMsg"></div>
+    </section>
+    <script>
+        function validateform() {
+            const userName = document.forms["lpage"]["uname"].value
+            const passWord = document.forms["lpage"]["pword"].value
+           
+            const uName = "admin"
+            const pWord = "1234"
+
+            // if(!x) {
+            //     document.getElementById("errorMsg").innerHTML = "Username or password is not correct"
+            //     return false
+            // }
+            if(userName.toLowerCase !== uName.toLowerCase || passWord !== pWord) {
+                document.getElementById("errorMsg").innerHTML = "Username or password is not correct"
+                return false
+            }
+
+            document.getElementById("errorMsg").innerHTML = "Login Sucessfull!"
+            window.open("design.html")
+            return false
+
+            
+        }
+    </script>
+</body>
+</html>
